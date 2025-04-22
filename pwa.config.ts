@@ -1,7 +1,7 @@
 import type { DisplayOverride } from "vite-plugin-pwa"
 
 const START_PATH = '.'
-const SCOPE = 'https://nurgeldiserikbay.github.io/'
+const SCOPE = ''
 const START_URL = './index.html?fullscreen=true'
 
 export default {
@@ -9,6 +9,7 @@ export default {
 	registerType: 'autoUpdate' as const,
 	workbox: {
 		globPatterns: ['**/*.{js,css,html,ico,png,svg,json,vue,txt,woff2}'],
+		maximumFileSizeToCacheInBytes: 4000000,
 	},
 	manifest: {
 		id: 'com.thelightcome.nurgeldiserikbaygithubio',
