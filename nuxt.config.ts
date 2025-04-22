@@ -1,5 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-// import path from 'path'
+import path from 'path'
 
 import pwaConfig from './pwa.config'
 
@@ -8,20 +8,24 @@ export default defineNuxtConfig({
 	modules: ['@pinia/nuxt', '@nuxtjs/i18n', '@vite-pwa/nuxt'],
 	css: ['~/assets/styles/style.scss'],
 	pwa: pwaConfig,
+
 	components: [
 		{
 			path: '~/components',
 			pathPrefix: false,
 		},
 	],
+
 	i18n: {
 		vueI18n: '~/i18n/i18n.config.ts',
 	},
-	// nitro: {
-	// 	output: {
-	// 		publicDir: path.join(__dirname, './docs'),
-	// 	},
-	// },
+
+	nitro: {
+		output: {
+			publicDir: path.join(__dirname, './docs'),
+		},
+	},
+
 	app: {
 		pageTransition: { name: 'route-transition' },
 		head: {
@@ -94,4 +98,6 @@ export default defineNuxtConfig({
 			],
 		},
 	},
+
+	compatibilityDate: '2025-04-22',
 })
