@@ -32,6 +32,9 @@ export default defineNuxtConfig({
 			title: 'nurgeldiserikbay.github.io - Personal Portfolio',
 			charset: 'utf-8',
 			viewport: 'width=device-width, initial-scale=1',
+			base: {
+				href: '/',
+			},
 			meta: [
 				{
 					name: 'description',
