@@ -509,7 +509,7 @@ return getSize;
     if ( ElemProto.matchesSelector ) {
       return 'matchesSelector';
     }
-    // check vendor prefixes
+    // check additionals prefixes
     var prefixes = [ 'webkit', 'moz', 'ms', 'o' ];
 
     for ( var i=0; i < prefixes.length; i++ ) {
@@ -827,7 +827,7 @@ var transitionEndEvent = {
   transition: 'transitionend'
 }[ transitionProperty ];
 
-// cache all vendor properties that could have vendor prefix
+// cache all additionals properties that could have additionals prefix
 var vendorProperties = {
   transform: transformProperty,
   transition: transitionProperty,
@@ -891,7 +891,7 @@ proto.css = function( style ) {
   var elemStyle = this.element.style;
 
   for ( var prop in style ) {
-    // use vendor property if available
+    // use additionals property if available
     var supportedProp = vendorProperties[ prop ] || prop;
     elemStyle[ supportedProp ] = style[ prop ];
   }
