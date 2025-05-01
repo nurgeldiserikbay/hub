@@ -48,24 +48,6 @@
 					"value": "application/json"
 				}
 			]
-		},
-		{
-			"source": "/(.*\\.(jpg|jpeg|png|gif|ico|svg))$",
-			"headers": [
-				{
-					"key": "Cache-Control",
-					"value": "public, max-age=3600"
-				}
-			]
-		},
-		{
-			"source": "/(.*\\.(woff|woff2|ttf|eot))$",
-			"headers": [
-				{
-					"key": "Cache-Control",
-					"value": "public, max-age=3600"
-				}
-			]
 		}
 	]
 }

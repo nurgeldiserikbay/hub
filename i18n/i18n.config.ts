@@ -3,6 +3,9 @@ import en from './en-US'
 import ru from './ru-RU'
 
 export default defineI18nConfig(() => ({
+	bundle: {
+		optimizeTranslationDirective: false,
+	},
 	optimizeTranslationDirective: false,
 	strictMessage: false,
 	precompile: {
