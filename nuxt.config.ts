@@ -20,11 +20,11 @@ export default defineNuxtConfig({
 		vueI18n: '~/i18n/i18n.config.ts',
 	},
 
-	nitro: {
-		output: {
-			publicDir: path.join(__dirname, './docs'),
-		},
-	},
+	// nitro: {
+	// 	output: {
+	// 		publicDir: path.join(__dirname, './docs'),
+	// 	},
+	// },
 
 	app: {
 		pageTransition: { name: 'route-transition' },
